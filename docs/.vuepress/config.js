@@ -1,7 +1,7 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  dest: './_site',
+  // dest: './_site',
   locales: {
     '/': {
       lang: 'en-US',
@@ -15,10 +15,12 @@ module.exports = ctx => ({
     }
   },
   head: [
-    // ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `./favicon.ico` }],
-    ['link', { rel: 'shortcut icon', href: `./logo.png` }],
+    ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `/icons/favicon.ico` }],
     ['link', { rel: 'icon', href: `/logo.png` }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/icons/favicon-32x32.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/icons/favicon-16x16.png"}],
+    // ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'manifest', href: '/icons/site.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
