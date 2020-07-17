@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "4c8c3245d405fefd1f066896c464e2d7"
+    "revision": "52aade5454d6786b8d43639959580c0d"
   },
   {
     "url": "architecture.png",
@@ -194,8 +194,8 @@ self.__precacheManifest = [
     "revision": "0c3186b34f7b68f751d16bb3e999b70a"
   },
   {
-    "url": "assets/js/app.7242d2e4.js",
-    "revision": "b0ecb857c8d23f2a97e10ad2ecc3fa91"
+    "url": "assets/js/app.2ab8a0a8.js",
+    "revision": "d50c0c59959d82aff1c5a5f1b6a6bc84"
   },
   {
     "url": "assets/js/vendors~flowchart.f07e9de1.js",
@@ -207,51 +207,51 @@ self.__precacheManifest = [
   },
   {
     "url": "cmdr/faq.html",
-    "revision": "71846a52084ec03589785e50e6975e06"
+    "revision": "be784761eca97488b06021ed01785cab"
   },
   {
     "url": "cmdr/getting-started.html",
-    "revision": "892136dd930045e441e6801372e1e226"
+    "revision": "fef0b752546d6667e543b619dfaccfbc"
   },
   {
     "url": "cmdr/guide/index.html",
-    "revision": "23caf551652210405ffc8bfa8609bc3e"
+    "revision": "04aad7679a20c7ff8405dfeb6976e431"
   },
   {
     "url": "cmdr/guide/Z01.cli-main.html",
-    "revision": "2178648707d96fccb0bb096788581257"
+    "revision": "f1c6f46d71344e1286dce78450b0d507"
   },
   {
     "url": "cmdr/guide/Z05.subcommand.html",
-    "revision": "681737bf1778e90006e8849c3e9a92a8"
+    "revision": "f3964aab2e289bb1a47f28b0b83dfac2"
   },
   {
     "url": "cmdr/guide/Z06.actions.html",
-    "revision": "6af2b1f6409817d58c1c5850100efc19"
+    "revision": "8a11dbe3a87992bc6cbce834faa58f1f"
   },
   {
     "url": "cmdr/guide/Z07.flags.html",
-    "revision": "d960e49b413f924b1cdc5e78e311feb0"
+    "revision": "b04c904a33e9549a4d5b496698e53308"
   },
   {
     "url": "cmdr/guide/Z15.adv.html",
-    "revision": "b36844df64c8aa484d10ff4f2b8ad0d7"
+    "revision": "10ba7db11389202e5c67c2d22c1827a8"
   },
   {
     "url": "cmdr/guide/Z30.option-store.html",
-    "revision": "4428554b69cb37a689a9aceb64c3acd9"
+    "revision": "b0ecf6db4b1837fccb50a36e9d3474aa"
   },
   {
     "url": "cmdr/guide/Z81.helpers.html",
-    "revision": "1e921b0cfccc2dc795e1099c3d83bb89"
+    "revision": "ea855e77d2fb983af8a59c70d14f21de"
   },
   {
     "url": "cmdr/guide/Z91.others.html",
-    "revision": "7f60046537279e51d536db49ecd5ecda"
+    "revision": "dc59c121f51bc12c874018e685b82d27"
   },
   {
     "url": "cmdr/index.html",
-    "revision": "fd031cdfcb040a23d86cefca5719fda9"
+    "revision": "5644529b46a3eefc081b9d7e4f428363"
   },
   {
     "url": "hero.png",
@@ -287,7 +287,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "0e4fff67796fa6b3903c1dcdf5b2bb5e"
+    "revision": "94d1c38b5aa9afcc2d1c3735d5d7ebc1"
   },
   {
     "url": "line-numbers-desktop.png",
@@ -307,55 +307,55 @@ self.__precacheManifest = [
   },
   {
     "url": "zh/cmdr/faq.html",
-    "revision": "b331ed622e4926be86a318676c9ab7c1"
+    "revision": "f81d9c9c05ba2c5e1e56d56674850a4f"
   },
   {
     "url": "zh/cmdr/getting-started.html",
-    "revision": "cabbe342e24df9b3ab074266a54f582d"
+    "revision": "6c0728b8bbd2a857acdd5746e03fbb6f"
   },
   {
     "url": "zh/cmdr/guide/index.html",
-    "revision": "883280d94d399d2b92f17f767a428408"
+    "revision": "c6d68644c152bdb2e58d13200cbf4c1e"
   },
   {
     "url": "zh/cmdr/guide/Z01.cli-main.html",
-    "revision": "caa17ddf1dab46a0fc22d7d37996a4c4"
+    "revision": "d9f97ad78eb722cdb6fbe2f23ce42c60"
   },
   {
     "url": "zh/cmdr/guide/Z05.subcommand.html",
-    "revision": "3b5313c582cd5c55e2469574ba3c5d1d"
+    "revision": "eec568d660c86084ee2ebdcd248b7812"
   },
   {
     "url": "zh/cmdr/guide/Z06.actions.html",
-    "revision": "ad87d7df28a6020f46b956d75e127e43"
+    "revision": "da3fbf9c42f8e88e4ef4fa2e99970563"
   },
   {
     "url": "zh/cmdr/guide/Z07.flags.html",
-    "revision": "070885e490b82b8925285090b6b6f526"
+    "revision": "91b6ae1fba9c57fffe77512faef6aea6"
   },
   {
     "url": "zh/cmdr/guide/Z15.adv.html",
-    "revision": "7eb5198098ce945733e2a702ccfdae06"
+    "revision": "3196ab3aa09d87d51a523187698f920f"
   },
   {
     "url": "zh/cmdr/guide/Z30.option-store.html",
-    "revision": "7ce83ae07fb1739f9ac4f00a1f94baae"
+    "revision": "bbbb7db2659396db78b0a38134e5eb4c"
   },
   {
     "url": "zh/cmdr/guide/Z81.helpers.html",
-    "revision": "4aa12cb5b94ef98eb03d2b27dee5a01a"
+    "revision": "ee49bd113508e1d3935b55f7e32cb1fe"
   },
   {
     "url": "zh/cmdr/guide/Z91.others.html",
-    "revision": "eb11688db95712e048c9aaed98f678a7"
+    "revision": "89eab1b92744370c3d9cea03c165c870"
   },
   {
     "url": "zh/cmdr/index.html",
-    "revision": "333820008a44317c028f9e744b15f8e9"
+    "revision": "8fa4eda58f6af464b05785d61d4636b1"
   },
   {
     "url": "zh/index.html",
-    "revision": "22df59a7caccb2ab64cd748114fdb804"
+    "revision": "89c0b9fa9fce859a6c8a5470061688df"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
