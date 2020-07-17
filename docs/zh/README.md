@@ -19,7 +19,7 @@ features:
 footer: MIT Licensed | Copyright © 2020 by hedzr
 ---
 
-# Using `cmdr`
+# 立即使用 [`cmdr`](https://github.com/hedzr/cmdr)
 
 ```go
 package main
@@ -63,4 +63,7 @@ func buildRootCmd() (rootCmd *cmdr.RootCommand) {
 	return
 }
 ```
+
+就是如此清晰。
+
 

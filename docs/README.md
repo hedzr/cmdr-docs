@@ -20,7 +20,7 @@ footer: MIT Licensed | Copyright © 2020 by hedzr
 
 ---
 
-# Using `cmdr`
+# Using [`cmdr`](https://github.com/hedzr/cmdr)
 
 ```go
 package main
