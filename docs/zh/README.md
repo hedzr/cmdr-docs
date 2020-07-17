@@ -2,15 +2,65 @@
 home: true
 heroImage: 
 actionText: 快速上手 →
-actionLink: /zh/cmdr/
+actionLink: /zh/cmdr/getting-started.html
 features:
 - title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+  details: 采用简单的流式调用方式进行命令行参数定义，便于组织和管理。
+- title: 符合标准
+  details: 完全符合 POSIX 命令行界面兼容性标准。
+- title: 宽泛兼容
+  details: 你可以非常简单地从 `flag` 代码直接迁移到 `cmdr 方案，几乎无需任何修改。
+- title: 强力的参数管理
+  details: 使用 `Option Store` 管理应用程序的一切参数，层级化它们的逻辑结构。
+- title: 有用的调试信息
+  details: 使用命令行参数 `~~tree` 打印完整的命令表。
+- title: 多种拦截点
+  details: 在多个关键节点处都可以埋入回调函数从而定制 cmdr 的相关行为
 footer: MIT Licensed | Copyright © 2020 by hedzr
 ---
 
-# Hello VuePress
+# Using `cmdr`
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/hedzr/cmdr"
+)
+
+func main() {
+	if err := cmdr.Exec(buildRootCmd()); err != nil {
+		fmt.Printf("error: %+v\n", err)
+	}
+}
+
+func buildRootCmd() (rootCmd *cmdr.RootCommand) {
+	root := cmdr.
+		Root("test-app", "1.1").
+		Copyright("test-app is powered by cmdr", "hedzr").
+		Description("desc", "longDesc").
+		Examples("examples")
+		//.Action(func(cmd *cmdr.Command, args []string) (err error) { return; )
+	rootCmd = root.RootCommand()
+  
+	cmdr.NewBool(false).
+		Titles("enable-ueh", "ueh").
+		EnvKeys("ENABLE_UEH").
+		Description("Enables the unhandled exception handler?").
+		AttachTo(root)
+
+	root.NewSubCommand("soundex", "snd", "sndx", "sound").
+		Description("soundex test").
+		Group("Test").
+		TailPlaceholder("[text1, text2, ...]").
+		Action(func(cmd *cmdr.Command, args []string) (err error) {
+			for ix, s := range args {
+				fmt.Printf("%5d. %s => %s\n", ix, s, cmdr.Soundex(s))
+			}
+			return
+		})
+	return
+}
+```
+

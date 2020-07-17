@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Guide"
+title: "概览"
 date: 2020-07-13 11:15:11 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
@@ -25,25 +25,25 @@ excerpt: >-
 
 
 
-## Guide
+# `cmdr` 开发指南
 
-In this guide we will walk through the various parts of `cmdr`. Mainly the topics as following will be covered:
+在这个指南里，我们会遍历 `cmdr` 的各个特性来向你展示它可以做到些什么。我们将会解说如下（但也不限于此）的主要话题：
 
-- The basic layout of a `cmdr` application
+- 一个 `cmdr` CLI 应用程序的基本布局结构
 
-- Create SubCommands for additional functionality
+- 建立子命令（`Sub-command`）以及附加的功能性
 
-- Define actions that get run
+- 定义子命令的响应函数（`Action`）并执行到它
 
-- Adding flags to your app
+- 向你的应用程序添加命令行标志（`flags`）
 
 - 使用环境变量
 
 - 使用外部配置文件
 
-- Uses the advanced features of `cmdr`, such as Toggleable Flags Group, ...
+- 使用 `cmdr` 的高级特性，诸如：可自动翻转的标志组，...
 
-- Using the `Option Store` to get the app's Options
+- 使用 `Option Store` 来管理应用程序的层级化的配置数据
 
   从 Option Store 中提取配置数据，观察数据
 

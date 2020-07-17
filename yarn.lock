@@ -1238,7 +1238,7 @@
     markdown-it-table-of-contents "^0.4.0"
     prismjs "^1.13.0"
 
-"@vuepress/plugin-active-header-links@1.5.2":
+"@vuepress/plugin-active-header-links@1.5.2", "@vuepress/plugin-active-header-links@^1.5.2":
   version "1.5.2"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.5.2.tgz#5408d2ac5aa31d9b1ff581464f7ae0e462c1aa37"
   integrity sha1-VAjSrFqjHZsf9YFGT3rg5GLBqjc=
@@ -1294,7 +1294,7 @@
   dependencies:
     "@vuepress/shared-utils" "1.5.2"
 
-"@vuepress/plugin-search@1.5.2":
+"@vuepress/plugin-search@1.5.2", "@vuepress/plugin-search@^1.5.2":
   version "1.5.2"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-search/download/@vuepress/plugin-search-1.5.2.tgz#b8d77b4300b2e84f3c9c0d94f0a98638245196c2"
   integrity sha1-uNd7QwCy6E88nA2U8KmGOCRRlsI=

@@ -29,38 +29,46 @@ excerpt: >-
 
 
 
-`cmdr` is a golang library to interpret or parse the command-line input with POSIX-compliant style.
-
-
-## Features
-
-- Friendly API styles: Fluent, `flag`-like, or old-style (struct)
-
-- POSIX-compliant flags for CLI: short, long and *aliases*
-
-- Nested command and sub-commands
-
-- Strong data types. Such as: bool, int, uint, string, string slice, ...
-
-- Groupable (and sortable) commands and flags
-
-- Smart suggestions for wrong command and flags
-
-  since v1.1.3, using [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) instead of soundex.
-
-- Environment Variables overriding
-
-- Mergeable external configuration files
-
-- Automatic help screen generation
-
-- Riched debugging tools: `~~tree`, `--debug`, ....
-
-- Integration with `Options Store` which provides riched read/write for hierarchical application configurations.
+# 概要
 
 
 
-## Examples
+`cmdr` 是一个解释命令行输入内容的兼容于 POSIX 命令行风格代码库，以 Golang 编写。
+
+作为 Golang 标准库 `flag` 的一个好的替代品，`cmdr`还提供一个层级式的参数管理器，用于管理应用程序的一切配置参数。
+
+
+
+
+## 特性
+
+- 对开发者友好的多种编程界面：流式调用风格，`flag` 式样的调用风格，以及旧式结构数据定义风格等
+
+- POSIX-兼容的命令行界面：短参数，长参数，以及额外提供的 `别名`
+
+- 可多级嵌套的命令和子命令
+
+- 直接支持多种数据类型的命令行参数。例如：bool, int, uint, string, string slice, ...
+
+- 可分组、可排序的命令列表、参数列表
+
+- 用户错误输入时的智能建议与提示：
+
+  从 v1.1.3 起，使用更强大的 [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) 算法来提供更精准的建议
+
+- 可从环境变量自动获得参数值
+
+- 可以智能合并外部配置文件中的参数集合
+
+- 自动打印可读性强的帮助屏幕
+
+- 提供一系列调试性工具帮助你管理大量的命令行参数定义：`~~tree`, `--debug`, ....
+
+- 与 `Options Store` 密切集成，从而提供层级化的配置参数管理功能
+
+
+
+## 示例
 
 ```go
 package main
@@ -101,10 +109,15 @@ func buildRootCmd() (rootCmd *cmdr.RootCommand) {
 [Play on Go Playground](https://play.golang.org/p/1yDj-dCJ0bB)
 
 
+### 更多的示例
 
-## License
+我们已经准备了一组样板性的小型项目，用以演示 cmdr 的某一个或者多个特性有何用途、如何使用。你可以在 <https://github.com/hedzr/cmdr-examples> 中找到它们。
 
-MIT and feel free.
+
+
+## 许可证
+
+MIT！最大限度自行取用
 
 
 

@@ -1,36 +1,33 @@
 ---
-# layout: single
-title: "Getting Start"
+#sidebar: 'auto'
+#sidebarDepth: 3
+
+#layout: single
+title: "Getting Started"
 date: 2020-07-13 10:15:11 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
-categories: golang cmdr getting-start
-comments: true
-toc: true
-header:
-  overlay_image: /assets/images/cmdr/help-screen.png
-  overlay_filter: rgba(128, 128, 0, 0.3)
-excerpt: >-
-  Getting Start for cmdr ...
-#header:
-#  overlay_image: /assets/images/unsplash-image-1.jpg
-#  overlay_filter: rgba(0, 0, 0, 0.15)
-#  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-#  actions:
-#    - label: "More Info"
-#      url: "https://unsplash.com"
-
+categories: golang cmdr getting-started
 ---
 
-## Getting Started
 
-### Installation
+
+# Getting Started
+
+
+
+
+## Installation
 
 `go get -v github.com/hedzr/cmdr`
 
+> `cmdr` can support go v1.11 and later.
+>
+> To have a full view about our compatibilities to golang version, take a look [go.yml](https://github.com/hedzr/cmdr/blob/master/.github/workflows/go.yml).
 
 
-### Base Usage
+
+## Base Usage
 
 Simple app here:
 
@@ -90,7 +87,11 @@ $ {{.AppName}} --help
 )
 ```
 
+You can get its full source codes at <https://github.com/hedzr/cmdr-examples/blob/master/examples/getting-start>.
 
+
+
+### Display the Help Screen
 
 Run it and show the help screen:
 
@@ -104,6 +105,8 @@ The results should be:
 
 
 
+### Run a `Sub-command`
+
 Now we could run the sub-command `soundex` to test:
 
 ```bash
@@ -113,6 +116,8 @@ $ go run ./examples/getting-start sndx fish bird
 ```
 
 
+
+### All folks
 
 Congrates, you took the shot!
 
@@ -128,13 +133,9 @@ Congrates, you took the shot!
 
 
 
+🔚
 
 
-
-
-## END
-
-## 🔚
 
 
 

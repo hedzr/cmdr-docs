@@ -3,7 +3,7 @@
 #sidebarDepth: 3
 
 #layout: single
-title: "Getting Started"
+title: "快速起步"
 date: 2020-07-13 10:15:11 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
@@ -27,22 +27,26 @@ categories: golang cmdr getting-start
 
 
 
+# 快速起步
 
-## Installation
+
+
+
+## 安装
 
 `go get -v github.com/hedzr/cmdr`
 
+无论你有否使用 Go Modules，上述命令都能够有效地安装 `cmdr` 到你的项目中，请在你的项目等根目录中执行该命令。
+
+> 当前，`cmdr` 兼容于 go 1.11 及其以上的版本。理论上我们可以兼容更低的版本二无需任何修改，然而请注意更低的版本并未获得更多的测试。
+>
+> 要查看 cmdr 的 golang 版本兼容性矩阵，请直达 [go.yml](https://github.com/hedzr/cmdr/blob/master/.github/workflows/go.yml)。
 
 
-### for go modules
 
-#### test
+## 基本用法
 
-##### run
-
-## Base Usage
-
-Simple app here:
+这里有一个极简单的应用程序：
 
 ```go
 package main
@@ -100,21 +104,27 @@ $ {{.AppName}} --help
 )
 ```
 
+其完成的源码可以在 <https://github.com/hedzr/cmdr-examples/blob/master/examples/getting-start> 中找到。
 
 
-Run it and show the help screen:
+
+### 显示帮助屏
+
+运行上面的程序以显示自动生成的帮助屏：
 
 ```bash
 go run ./examples/getting-start
 ```
 
-The results should be:
+结果应该和下图基本上无差别：
 
 ![image-20200713140513668](https://i.loli.net/2020/07/13/HwWo1v2JczCEat7.png)
 
 
 
-Now we could run the sub-command `soundex` to test:
+### 运行一个子命令
+
+现在我们可以试试运行子命令 `soundex` 了：
 
 ```bash
 $ go run ./examples/getting-start sndx fish bird
@@ -124,7 +134,9 @@ $ go run ./examples/getting-start sndx fish bird
 
 
 
-Congrates, you took the shot!
+### 搞定了
+
+上面走过，就可以知道 cmdr 能够干点什么了。
 
 
 

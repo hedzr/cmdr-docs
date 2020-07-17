@@ -1,17 +1,17 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  dest: '../../_site',
+  dest: './_site',
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'ABC',
-      description: 'Vue-powered Static Site Generator'
+      title: 'CMDR Documentation',
+      description: 'The Documentation about cmdr'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'ABC',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'CMDR 文档',
+      description: 'CMDR 文档，开发指南，示例等'
     }
   },
   head: [
@@ -27,7 +27,7 @@ module.exports = ctx => ({
   ],
   theme: 'carbon',
   themeConfig: {
-    repo: 'hedzr/abc',
+    repo: 'hedzr/cmdr-docs',
     editLinks: true,
     docsDir: 'docs',
     // // #697 Provided by the official algolia team.
@@ -43,7 +43,7 @@ module.exports = ctx => ({
     smoothScroll: true,
     // sidebar: 'auto',
     sidebarDepth: 5,
-    displayAllHeaders: false,
+    // displayAllHeaders: false,
     activeHeaderLinks: true,
     lastUpdated: 'Last Updated', // string | boolean
     locales: {
@@ -55,8 +55,8 @@ module.exports = ctx => ({
         lastUpdated: 'Last Updated',
         nav: require('./nav/en'),
         sidebar: {
-          '/api/': getApiSidebar(),
-          '/cmdr/': getCmdrGuideSidebar('Guide'),
+          //'/api/': getApiSidebar(),
+          '/cmdr/': getCmdrGuideSidebar('Guide', 'Introduction', 'Others'),
           //'/guide/': getGuideSidebar('Guide', 'Advanced'),
           //'/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
           //'/theme/': getThemeSidebar('Theme', 'Introduction')
@@ -71,7 +71,7 @@ module.exports = ctx => ({
         nav: require('./nav/zh'),
         sidebar: {
           //'/zh/api/': getApiSidebar(),
-          '/zh/cmdr/': getCmdrGuideSidebar('指南'),
+          '/zh/cmdr/': getCmdrGuideSidebar('指南', '介绍', '其他'),
           //'/zh/guide/': getGuideSidebar('指南', '深入'),
           //'/zh/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
           //'/zh/theme/': getThemeSidebar('主题', '介绍')
@@ -81,6 +81,10 @@ module.exports = ctx => ({
     }
   },
   plugins: [
+    ['@vuepress/active-header-links', {
+      sidebarLinkSelector: '.sidebar-link',
+      headerAnchorSelector: '.header-anchor'
+    }],
     ['@vuepress/back-to-top', true],
     ['@vuepress/pwa', {
       serviceWorker: true,
@@ -89,6 +93,9 @@ module.exports = ctx => ({
     ['@vuepress/medium-zoom', true],
     ['@vuepress/google-analytics', {
       ga: 'UA-171624977-1'
+    }],
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
     }],
     ['container', {
       type: 'vue',
@@ -108,7 +115,7 @@ module.exports = ctx => ({
   ],
 
   markdown: {
-    // extractHeaders: [ 'h2', 'h3', 'h4' ],
+    extractHeaders: [ 'h2', 'h3', 'h4' ],
     // // markdown-it-anchor 的选项
     // anchor: { permalink: false },
     // // markdown-it-toc 的选项
@@ -126,67 +133,63 @@ module.exports = ctx => ({
     //   // md.use(require('markdown-it-anchor'))
     // },
   },
-
-  // PWA via https
-  serviceWorker: true,
-
 })
 
-function getApiSidebar () {
-  return [
-    'cli',
-    'node'
-  ]
-}
+// function getApiSidebar () {
+//   return [
+//     'cli',
+//     'node'
+//   ]
+// }
 
-function getGuideSidebar (groupA, groupB) {
-  return [
-    {
-      title: groupA,
-      collapsable: false,
-      children: [
-        '',
-        'getting-started',
-        'directory-structure',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'i18n',
-        'deploy'
-      ]
-    },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'frontmatter',
-        'permalinks',
-        'markdown-slot',
-        'global-computed'
-      ]
-    }
-  ]
-}
+// function getGuideSidebar (groupA, groupB) {
+//   return [
+//     {
+//       title: groupA,
+//       collapsable: false,
+//       children: [
+//         '',
+//         'getting-started',
+//         'directory-structure',
+//         'basic-config',
+//         'assets',
+//         'markdown',
+//         'using-vue',
+//         'i18n',
+//         'deploy'
+//       ]
+//     },
+//     {
+//       title: groupB,
+//       collapsable: false,
+//       children: [
+//         'frontmatter',
+//         'permalinks',
+//         'markdown-slot',
+//         'global-computed'
+//       ]
+//     }
+//   ]
+// }
 
 const cmdrGuideFiles = fs
   .readdirSync(path.resolve(__dirname, '../cmdr/guide'))
+  .filter(n => !/^\..*/.test(n) && /\.md/.test(n))
   .sort()
   .map(filename => {
-    if (filename.slice(-3)=='.md') {
       var name = filename.slice(0, -3)
       return (name == 'README') ? 'guide/' : 'guide/' + name
-    }
   })
-console.log(cmdrGuideFiles)
-function getCmdrGuideSidebar (title) {
+// console.log(cmdrGuideFiles)
+
+function getCmdrGuideSidebar (title, intro, others) {
   return [
     {
       title: 'CMDR',
       collapsable: false,
       children: [
-        ['', 'Introduction'],
-        'getting-started',
+        ['', intro],
+        'getting-started.html',
       ]
     },
     {
@@ -195,10 +198,10 @@ function getCmdrGuideSidebar (title) {
       children: cmdrGuideFiles
     },
     {
-      title: 'Others',
+      title: others,
       collapsable: false,
       children: [
-        'faq',
+        'faq.html',
       ]
     },
   ]
@@ -209,43 +212,43 @@ function getCmdrGuideSidebar (title) {
 //   .map(filename => 'official/' + filename.slice(0, -3))
 //   .sort()
 
-function getPluginSidebar (pluginTitle, pluginIntro, officialPluginTitle) {
-  return [
-    {
-      title: pluginTitle,
-      collapsable: false,
-      children: [
-        ['', pluginIntro],
-        'using-a-plugin',
-        'writing-a-plugin',
-        'life-cycle',
-        'option-api',
-        'context-api'
-      ]
-    },
-    {
-      title: officialPluginTitle,
-      collapsable: false,
-      children: officalPlugins
-    }
-  ]
-}
+// function getPluginSidebar (pluginTitle, pluginIntro, officialPluginTitle) {
+//   return [
+//     {
+//       title: pluginTitle,
+//       collapsable: false,
+//       children: [
+//         ['', pluginIntro],
+//         'using-a-plugin',
+//         'writing-a-plugin',
+//         'life-cycle',
+//         'option-api',
+//         'context-api'
+//       ]
+//     },
+//     {
+//       title: officialPluginTitle,
+//       collapsable: false,
+//       children: officalPlugins
+//     }
+//   ]
+// }
 
-function getThemeSidebar (groupA, introductionA) {
-  return [
-    {
-      title: groupA,
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        ['', introductionA],
-        'using-a-theme',
-        'writing-a-theme',
-        'option-api',
-        'default-theme-config',
-        'blog-theme',
-        'inheritance'
-      ]
-    }
-  ]
-}
+// function getThemeSidebar (groupA, introductionA) {
+//   return [
+//     {
+//       title: groupA,
+//       collapsable: false,
+//       sidebarDepth: 2,
+//       children: [
+//         ['', introductionA],
+//         'using-a-theme',
+//         'writing-a-theme',
+//         'option-api',
+//         'default-theme-config',
+//         'blog-theme',
+//         'inheritance'
+//       ]
+//     }
+//   ]
+// }

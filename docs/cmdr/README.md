@@ -1,17 +1,11 @@
 ---
-sidebarDepth: 3
-
-#layout: single
 title: "Overview"
 date: 2020-07-13 09:15:11 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
 categories: golang cmdr home
 comments: true
-toc: true
-header:
-  overlay_image: /assets/images/cmdr/help-screen.png
-  overlay_filter: rgba(128, 128, 0, 0.3)
+
 excerpt: >-
   Index to cmdr, a golang library to interpret/parse the command-line input with POSIX-compliant mode ...
 #header:
@@ -21,20 +15,24 @@ excerpt: >-
 #  actions:
 #    - label: "More Info"
 #      url: "https://unsplash.com"
-
-
 ---
 
 
 
-# `cmdr`
-
-`cmdr` is a golang library to interpret or parse the command-line input with POSIX-compliant style.
 
 
-## About
+# Overview
 
-### Features
+
+
+`cmdr` is a golang library to interpret or parse the command-line input with POSIX-compliant style (the [getopt_long](http://www.gnu.org/s/libc/manual/html_node/Argument-Syntax.html#Argument-Syntax) command line UI). 
+
+`cmdr` is a better replacement to the standard library `flag`.
+
+There is a full `Options Store` (configurations) for your hierarchy configuration data too.
+
+
+## Features
 
 - Friendly API styles: Fluent, `flag`-like, or old-style (struct)
 
@@ -62,7 +60,7 @@ excerpt: >-
 
 
 
-### Examples
+## Examples
 
 ```go
 package main
@@ -104,10 +102,16 @@ func buildRootCmd() (rootCmd *cmdr.RootCommand) {
 
 
 
-### License
+### More Examples
+
+There are lots of small apps to show you what and how to apply a feature  of `cmdr`. They lies at: <https://github.com/hedzr/cmdr-examples>.
+
+
+
+## License
 
 MIT and feel free.
 
 
 
-### 🔚
+🔚
