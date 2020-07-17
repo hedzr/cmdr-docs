@@ -30,8 +30,8 @@ jobs:
       #    CI: true
 
       - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@3.5.7
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages # The branch the action should deploy to.
-            FOLDER: docs/.vuepress/dist # The folder the action should deploy.
+        uses: JamesIves/github-pages-deploy-action@3.5.7
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/.vuepress/dist # The folder the action should deploy.
