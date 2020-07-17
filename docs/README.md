@@ -1,20 +1,20 @@
 ---
 home: true
 heroImage: 
-actionText: 快速上手 →
+actionText: Getting Started →
 actionLink: /zh/cmdr/getting-started.html
 features:
-- title: 简洁至上
+- title: Keep it simple
   details: 采用简单的流式调用方式进行命令行参数定义，便于组织和管理。
-- title: 符合标准
+- title: POSIX-Compliant
   details: 完全符合 POSIX 命令行界面兼容性标准。
-- title: 宽泛兼容
+- title: Coding Loosely
   details: 你可以非常简单地从 `flag` 代码直接迁移到 `cmdr 方案，几乎无需任何修改。
-- title: 强力的参数管理
+- title: Strong Hierarchical Configurations
   details: 使用 `Option Store` 管理应用程序的一切参数，层级化它们的逻辑结构。
-- title: 有用的调试信息
+- title: Useful Debugging Information
   details: 使用命令行参数 `~~tree` 打印完整的命令表。
-- title: 多种拦截点
+- title: Ready for Interceptions
   details: 在多个关键节点处都可以埋入回调函数从而定制 cmdr 的相关行为
 footer: MIT Licensed | Copyright © 2020 by hedzr
 
