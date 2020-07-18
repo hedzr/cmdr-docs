@@ -4,18 +4,18 @@ heroImage:
 actionText: Getting Started →
 actionLink: /zh/cmdr/getting-started.html
 features:
-- title: Keep it simple
-  details: 采用简单的流式调用方式进行命令行参数定义，便于组织和管理。
+- title: Keep It Simple
+  details: Define the CLI arguments with fluent style
 - title: POSIX-Compliant
-  details: 完全符合 POSIX 命令行界面兼容性标准。
+  details: Be compliant with POSIX Command-line conventions
 - title: Coding Loosely
-  details: 你可以非常简单地从 `flag` 代码直接迁移到 `cmdr 方案，几乎无需任何修改。
+  details: Simply to migrate from standard library `flag`
 - title: Strong Hierarchical Configurations
-  details: 使用 `Option Store` 管理应用程序的一切参数，层级化它们的逻辑结构。
+  details: Manage any hierarchical configurations with `Option Store`
 - title: Useful Debugging Information
-  details: 使用命令行参数 `~~tree` 打印完整的命令表。
+  details: Print full commands tree with `~~tree`, Dump the hit/parsed info with `~~debug`
 - title: Ready for Interceptions
-  details: 在多个关键节点处都可以埋入回调函数从而定制 cmdr 的相关行为
+  details: Hook and customize the behaviors of `cmdr`
 footer: MIT Licensed | Copyright © 2020 by hedzr
 
 ---
