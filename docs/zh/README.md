@@ -11,9 +11,9 @@ features:
 - title: 宽泛兼容
   details: 你可以非常简单地从 `flag` 代码直接迁移到 `cmdr 方案，几乎无需任何修改。
 - title: 强力的参数管理
-  details: 使用 `Option Store` 管理应用程序的一切参数，层级化它们的逻辑结构。
+  details: 内置 `Option Store` 管理应用程序的一切参数，层级化它们的逻辑结构。
 - title: 有用的调试信息
-  details: 使用命令行参数 `~~tree` 打印完整的命令表。
+  details: 使用命令行参数 `~~tree`, `~~debug` 打印完整的命令表。
 - title: 多种拦截点
   details: 在多个关键节点处都可以埋入回调函数从而定制 cmdr 的相关行为
 footer: MIT Licensed | Copyright © 2020 by hedzr
