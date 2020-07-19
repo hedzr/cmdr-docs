@@ -36,9 +36,9 @@ categories: golang cmdr getting-start
 
 `go get -v github.com/hedzr/cmdr`
 
-无论你有否使用 Go Modules，上述命令都能够有效地安装 `cmdr` 到你的项目中，请在你的项目等根目录中执行该命令。
+无论你有否使用 Go Modules，上述命令都能够有效地安装 `cmdr` 到你的项目中，请在你的项目的根目录中执行该命令。
 
-> 当前，`cmdr` 兼容于 go 1.11 及其以上的版本。理论上我们可以兼容更低的版本二无需任何修改，然而请注意更低的版本并未获得更多的测试。
+> 当前，`cmdr` 兼容于 go 1.11 及其以上的版本。理论上我们可以兼容更低的 Golang 版本而无需任何修改，然而请注意更低的版本并未获得更多的测试。
 >
 > 要查看 cmdr 的 golang 版本兼容性矩阵，请直达 [go.yml](https://github.com/hedzr/cmdr/blob/master/.github/workflows/go.yml)。
 
