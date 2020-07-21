@@ -129,15 +129,20 @@ module.exports = ctx => ({
     // slugify: 
     lineNumbers: true,
     // plugins: {
-    //   '@org/foo': {}
-    //   'markdown-it-bar': {
-    //     // 提供你的选项
-    //   }
+    //   // '@org/foo': {}
+    //   'markdown-it-abbr': {}
     // },
-    // extendMarkdown: md => {
-    //   md.set({ breaks: true })
-    //   // md.use(require('markdown-it-anchor'))
-    // },
+    extendMarkdown: md => {
+      // md.set({ breaks: true })
+      // md.use(require('markdown-it-anchor'))
+      md.use(require('markdown-it-sub'))
+      md.use(require('markdown-it-sup'))
+      md.use(require('markdown-it-footnote'))
+      md.use(require('markdown-it-abbr'))
+      md.use(require('markdown-it-mark'))
+      md.use(require('markdown-it-deflist'))
+      md.use(require('markdown-it-ins'))
+    },
   },
 })
 
