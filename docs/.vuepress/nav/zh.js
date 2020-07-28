@@ -8,8 +8,43 @@ module.exports = [
     link: '/zh/cmdr/guide/'
   },
   {
-    text: '其它',
-    link: '/zh/cmdr/faq.html'
+    text: '其它', ariaLabel: '了解更多',
+    items: [
+      {
+        text: 'Others',
+        items: [
+          {
+            text: 'FAQ',
+            link: '/zh/cmdr/faq.html'
+          },
+          {
+            text: 'Markdown Demo',
+            link: '/zh/cmdr/markdown-demo.html'
+          }
+        ]
+      },
+      {
+        text: 'Externals',
+        items: [
+          {
+            text: 'CMDR',
+            link: 'https://github.com/hedzr/cmdr'
+          },
+          {
+            text: 'CMDR-Docs',
+            link: 'https://github.com/hedzr/cmdr-docs'
+          },
+          {
+            text: 'CMDR-Addons',
+            link: 'https://github.com/hedzr/cmdr-addons'
+          },
+          {
+            text: 'CMDR-Examples',
+            link: 'https://github.com/hedzr/cmdr-examples'
+          },
+        ]
+      },
+    ],
   },
   // {
   //   text: '插件',
