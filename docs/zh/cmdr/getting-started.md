@@ -5,7 +5,7 @@
 #layout: single
 title: "快速起步"
 date: 2020-07-13 10:15:11 +0800
-last-modified: 2020-08-16 09:12:12 +0800
+last-modified: 2020-08-17 01:40:01 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
 categories: golang cmdr getting-start
@@ -86,7 +86,7 @@ func soundex(root cmdr.OptCmd) {
 		TailPlaceholder("[text1, text2, ...]").
 		Action(func(cmd *cmdr.Command, args []string) (err error) {
 			for ix, s := range args {
-				fmt.Printf("%5d. %s => %s\n", ix, s, cmdr.Soundex(s))
+				fmt.Printf("%5d. %s => %s\n", ix, s, tool.Soundex(s))
 			}
 			return
 		})
