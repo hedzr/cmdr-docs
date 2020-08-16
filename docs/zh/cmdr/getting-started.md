@@ -5,6 +5,7 @@
 #layout: single
 title: "快速起步"
 date: 2020-07-13 10:15:11 +0800
+last-modified: 2020-08-16 09:12:12 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
 categories: golang cmdr getting-start
@@ -55,12 +56,15 @@ import (
 	"fmt"
 	"github.com/hedzr/cmdr"
 	cmdrexamples "github.com/hedzr/cmdr-examples"
-	"log"
+	"github.com/hedzr/cmdr/tool"
+	"github.com/hedzr/log"
 )
 
 func main() {
-	if err := cmdr.Exec(buildRootCmd()); err != nil {
-		log.Printf("error: %+v\n", err)
+	if err := cmdr.Exec(buildRootCmd(),
+		cmdr.WithLogx(log.NewStdLogger()),
+	); err != nil {
+		cmdr.Logger.Printf("error: %+v\n", err)
 	}
 }
 

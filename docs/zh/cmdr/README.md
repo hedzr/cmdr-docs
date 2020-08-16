@@ -4,6 +4,7 @@ sidebarDepth: 3
 #layout: single
 title: "Overview"
 date: 2020-07-13 09:15:11 +0800
+last-modified: 2020-08-16 09:12:12 +0800
 Author: hedzr
 tags: [commander, command-line, "command-line-parser", command-line-interface,  getops, posix, posix-compatible, hierarchical-configuration, hierarchy, cli, golang]
 categories: golang cmdr home
@@ -60,7 +61,7 @@ excerpt: >-
 
 - 可以智能合并外部配置文件中的参数集合  
 
-  开箱即用的符合 Linux/macOS 惯例	的配置文件布局方案
+  开箱即用的符合 Linux/macOS 惯例的配置文件布局方案
 
 - 自动输出可读性强的帮助屏幕
 
