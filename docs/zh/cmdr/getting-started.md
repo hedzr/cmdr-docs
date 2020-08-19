@@ -3,7 +3,7 @@
 #sidebarDepth: 3
 
 #layout: single
-title: "快速起步"
+title: "快速起步 (Getting Started)"
 date: 2020-07-13 10:15:11 +0800
 last-modified: 2020-08-17 01:40:01 +0800
 Author: hedzr
