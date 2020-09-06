@@ -63,6 +63,12 @@ excerpt: >-
 
   从 v1.1.3 起，使用更强大的 [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) 算法来提供更精准的建议
 
+- 用户输入时的命令行界面更鲁棒：
+
+  - 使用 `app commands options arguments` 输入结构，用户可以打乱参数输入顺序如 `./my-cli cmd1 subcmd2 -a subcmd3 -b --c11`
+  - 多级子命令的相关标志可以打乱顺序输入，自动识别上级命令的标志，同名的上级命令的标志被自动遮盖。
+  - 组合的短参数输入：非单字符的短参数在组合形式中被自动识别
+
 - 可从环境变量自动获得参数值
 
 - 可以智能合并外部配置文件中的参数集合  
