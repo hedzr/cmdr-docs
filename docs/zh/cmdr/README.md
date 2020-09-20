@@ -81,11 +81,13 @@ excerpt: >-
 
 - 内置集成了 `Options Store`，从而提供层级化的配置参数管理功能，不要再定义一堆的全局变量了，好的编码风格从此开始
 
-- 自动合并外部程序到 Extensions 子命令分组
+- 自动合并外部程序到 `Extensions 子命令分组`
 
   从 v1.7.21 起，主程序能够扫描扩展文件夹中的可执行的外部程序作为自己的 Extensions 子命令分组，从而允许动态扩展子命令集合、建立统一的 CLI 界面。
 
   ![image-20200920174339255](https://i.loli.net/2020/09/20/bdvhoMjH6elENOT.png)
+
+  可参考：[子命令](./guide/Z05.subcommand.md#extensions-子命令分组) 有关章节。
 
 
 
