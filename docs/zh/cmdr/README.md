@@ -53,27 +53,29 @@ excerpt: >-
 
 - 可多级嵌套的命令和子命令
 
-  - 多级子命令允许下级标志参数覆盖上级同名参数
+  *多级子命令允许下级标志参数覆盖上级同名参数，免除设计时的headache*
 
-- 直接支持多种数据类型的命令行参数。例如：bool, int, uint, string, string slice, ...
+- 直接支持多种数据类型的命令行参数。*例如：bool, int, uint, string, string slice, ...*
 
-- 可分组、可排序的命令列表、参数列表
+- 可分组、可排序的命令列表、参数列表。
+
+- 提供预制的 [内建命令以及标志组](./Z15.adv.md#builtin-commands-and-flags)
 
 - 用户错误输入时的智能建议与提示：  
 
-  从 v1.1.3 起，使用更强大的 [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) 算法来提供更精准的建议
+  *从 v1.1.3 起，使用更强大的 [Jaro-Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance) 算法来提供更精准的建议*
 
 - 用户输入时的命令行界面更鲁棒：
 
-  - 使用 `app commands options arguments` 输入结构，用户可以打乱参数输入顺序如 `./my-cli cmd1 subcmd2 -a subcmd3 -b --c11`
-  - 多级子命令的相关标志可以打乱顺序输入，自动识别上级命令的标志，同名的上级命令的标志被自动遮盖。
+  - 使用 `app commands options arguments` 输入结构，用户可以打乱参数输入顺序如 `./my-cli cmd1 subcmd2 -a subcmd3 -b --c11`。但我们建议将标志全部后置，并在其后在放置剩余参数
+  - 多级子命令的相关标志可以打乱顺序输入，自动识别上级命令的标志，同名的上级命令的标志被自动遮盖。无需在挑拣字母和单词时痛苦。
   - 组合的短参数输入：非单字符的短参数在组合形式中被自动识别
 
 - 可从环境变量自动获得参数值
 
 - 可以智能合并外部配置文件中的参数集合  
 
-  开箱即用的符合 Linux/macOS 惯例的配置文件布局方案
+  *开箱即用的符合 Linux/macOS 惯例的配置文件布局方案*
 
 - 自动输出可读性强的帮助屏幕
 
@@ -81,13 +83,15 @@ excerpt: >-
 
 - 内置集成了 `Options Store`，从而提供层级化的配置参数管理功能，不要再定义一堆的全局变量了，好的编码风格从此开始
 
-- 自动合并外部程序到 `Extensions 子命令分组`
+- 提供内置的可插拔的扩展（Extensions）支持
 
-  从 v1.7.21 起，主程序能够扫描扩展文件夹中的可执行的外部程序作为自己的 Extensions 子命令分组，从而允许动态扩展子命令集合、建立统一的 CLI 界面。
+  *自动合并外部程序到 `Extensions 子命令分组`*
 
-  ![image-20200920174339255](https://i.loli.net/2020/09/20/bdvhoMjH6elENOT.png)
-
-  可参考：[子命令](./guide/Z05.subcommand.md#extensions-子命令分组) 有关章节。
+  > 从 v1.7.21 起，主程序能够扫描扩展文件夹中的可执行的外部程序作为自己的 Extensions 子命令分组，从而允许动态扩展子命令集合、建立统一的 CLI 界面。
+  >
+  > ![image-20200920174339255](https://i.loli.net/2020/09/20/bdvhoMjH6elENOT.png)
+  >
+  > 可参考：[子命令 - Extentsions 子命令分组](./guide/Z05.subcommand.md#extensions-子命令分组) 有关章节。
 
 
 

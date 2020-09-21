@@ -52,6 +52,10 @@ excerpt: >-
 - 使用 `Option Store` 来管理应用程序的层级化的配置数据
 
   从 Option Store 中提取配置数据，观察数据
+  
+- 提供内置的 [可插拔的扩展（Extensions）支持]((./guide/Z05.subcommand.md#extensions-子命令分组))
+
+- 提供预制的[内建命令以及标志组](./Z15.adv.md#builtin-commands-and-flags)
 
 
 
