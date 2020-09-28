@@ -83,15 +83,22 @@ excerpt: >-
 
 - 内置集成了 `Options Store`，从而提供层级化的配置参数管理功能，不要再定义一堆的全局变量了，好的编码风格从此开始
 
-- 提供内置的可插拔的扩展（Extensions）支持
+- 支持动态扩充命令和标志：[动态扩充命令](./z15.adv.md#动态扩充命令)
 
-  *自动合并外部程序到 `Extensions 子命令分组`*
+  - 提供内置的可插拔的扩展（Extensions）支持
 
-  > 从 v1.7.21 起，主程序能够扫描扩展文件夹中的可执行的外部程序作为自己的 Extensions 子命令分组，从而允许动态扩展子命令集合、建立统一的 CLI 界面。
-  >
-  > ![image-20200920174339255](https://i.loli.net/2020/09/20/bdvhoMjH6elENOT.png)
-  >
-  > 可参考：[子命令 - Extentsions 子命令分组](./guide/Z05.subcommand.md#extensions-子命令分组) 有关章节。
+    *自动合并外部程序到 `Extensions 子命令分组`*
+  
+    > 从 v1.7.21 起，主程序能够扫描扩展文件夹中的可执行的外部程序作为自己的 Extensions 子命令分组，从而允许动态扩展子命令集合、建立统一的 CLI 界面。
+    >
+    > ![image-20200920174339255](https://i.loli.net/2020/09/20/bdvhoMjH6elENOT.png)
+    >
+    > 可参考：[子命令 - Extentsions 子命令分组](./guide/Z05.subcommand.md#extensions-子命令分组) 有关章节。
+    
+  - 支持 `cmdr-addons` Golang 插件：[cmdr-addons 插件](./Z15.adv.md#_2-通过-golang-插件机制进行扩充) （*since v1.7.23*）
+  
+  - 支持从配置文件中加载命令定义：[命令别名](./Z15.adv.md#_3-通过配置文件定义别名段) （*since v1.7.25*）
+  
 
 
 
