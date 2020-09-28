@@ -22,15 +22,13 @@ excerpt: >-
 #  actions:
 #    - label: "More Info"
 #      url: "https://unsplash.com"
-
-
 ---
 
 
 
 
 
-# 概要
+# 概要（Overview）
 
 
 
@@ -41,7 +39,7 @@ excerpt: >-
 
 
 
-## 特性
+## 特性（Features）
 
 - 对开发者友好的多种编程界面：流式调用风格，`flag` 兼容风格，以及旧式的结构数据定义风格等
 
@@ -102,7 +100,7 @@ excerpt: >-
 
 
 
-## 示例
+## 示例（Examples）
 
 ```go
 package main
@@ -143,13 +141,13 @@ func buildRootCmd() (rootCmd *cmdr.RootCommand) {
 [Play on Go Playground](https://play.golang.org/p/1yDj-dCJ0bB)
 
 
-### 更多的示例
+### 更多的示例（More）
 
 我们已经准备了一组样板性的小型项目，用以演示 cmdr 的某一个或者多个特性有何用途、如何使用。你可以在 <https://github.com/hedzr/cmdr-examples> 中找到它们。
 
 
 
-## 许可证
+## 许可证（LICENSE）
 
 MIT！最大限度自行取用
 
