@@ -26,7 +26,8 @@ jobs:
       - run: yarn install      # npm install
       - run: yarn build   # npm run build --if-present
       - run: |
-        touch docs/.vuepress/dist/.nojekyll
+          touch docs/.vuepress/dist/.nojekyll
+
       #- run: npm test
       #  env:
       #    CI: true
