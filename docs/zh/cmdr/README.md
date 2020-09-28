@@ -81,7 +81,7 @@ excerpt: >-
 
 - 内置集成了 `Options Store`，从而提供层级化的配置参数管理功能，不要再定义一堆的全局变量了，好的编码风格从此开始
 
-- 支持动态扩充命令和标志：[动态扩充命令](./z15.adv.md#动态扩充命令)
+- 支持动态扩充命令和标志：[动态扩充命令](./guide/z15.adv.md#动态扩充命令)
 
   - 提供内置的可插拔的扩展（Extensions）支持
 
@@ -93,9 +93,9 @@ excerpt: >-
     >
     > 可参考：[子命令 - Extentsions 子命令分组](./guide/Z05.subcommand.md#extensions-子命令分组) 有关章节。
     
-  - 支持 `cmdr-addons` Golang 插件：[cmdr-addons 插件](./Z15.adv.md#_2-通过-golang-插件机制进行扩充) （*since v1.7.23*）
+  - 支持 `cmdr-addons` Golang 插件：[cmdr-addons 插件](./guide/Z15.adv.md#_2-通过-golang-插件机制进行扩充) （*since v1.7.23*）
   
-  - 支持从配置文件中加载命令定义：[命令别名](./Z15.adv.md#_3-通过配置文件定义别名段) （*since v1.7.25*）
+  - 支持从配置文件中加载命令定义：[命令别名](./guide/Z15.adv.md#_3-通过配置文件定义别名段) （*since v1.7.25*）
   
 
 
