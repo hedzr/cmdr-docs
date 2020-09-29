@@ -55,7 +55,9 @@ excerpt: >-
   
 - 提供内置的 [可插拔的扩展（Extensions）支持]((./guide/Z05.subcommand.md#extensions-子命令分组))
 
-- 提供预制的[内建命令以及标志组](./Z15.adv.md#builtin-commands-and-flags)
+- 提供动态的命令和标志扩充：[动态扩充命令](./guide/z15.adv.md#动态扩充命令)
+
+- 提供预制的 [内建命令以及标志组](./Z15.adv.md#builtin-commands-and-flags)
 
 
 
