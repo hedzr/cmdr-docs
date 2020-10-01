@@ -63,7 +63,7 @@ module.exports = ctx => ({
         nav: require('./nav/en'),
         sidebar: {
           //'/api/': getApiSidebar(),
-          '/cmdr/': getCmdrGuideSidebar('Guide', 'Introduction', 'Others'),
+          '/cmdr/': getCmdrGuideSidebar('Guide', 'Introduction', 'References', 'Others'),
           //'/guide/': getGuideSidebar('Guide', 'Advanced'),
           //'/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
           //'/theme/': getThemeSidebar('Theme', 'Introduction')
@@ -78,7 +78,7 @@ module.exports = ctx => ({
         nav: require('./nav/zh'),
         sidebar: {
           //'/zh/api/': getApiSidebar(),
-          '/zh/cmdr/': getCmdrGuideSidebar('指南', '介绍', '其他'),
+          '/zh/cmdr/': getCmdrGuideSidebar('指南', '介绍', '参考', '其他'),
           //'/zh/guide/': getGuideSidebar('指南', '深入'),
           //'/zh/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
           //'/zh/theme/': getThemeSidebar('主题', '介绍')
@@ -194,7 +194,7 @@ const cmdrGuideFiles = fs
   })
 // console.log(cmdrGuideFiles)
 
-function getCmdrGuideSidebar (title, intro, others) {
+function getCmdrGuideSidebar (title, intro, refer, others) {
   return [
     {
       title: 'CMDR',
@@ -208,6 +208,13 @@ function getCmdrGuideSidebar (title, intro, others) {
       title: title,
       collapsable: false,
       children: cmdrGuideFiles
+    },
+    {
+      title: refer,
+      collapsable: false,
+      children: [
+        'refs.html',
+      ]
     },
     {
       title: others,
