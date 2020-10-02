@@ -42,6 +42,18 @@ module.exports = [
             text: 'CMDR-Examples',
             link: 'https://github.com/hedzr/cmdr-examples'
           },
+          {
+            text: 'CMDR-Base',
+            link: 'https://github.com/hedzr/cmdr-base'
+          },
+          {
+            text: 'hedzr/log',
+            link: 'https://github.com/hedzr/log'
+          },
+          {
+            text: 'hedzr/logex',
+            link: 'https://github.com/hedzr/logex'
+          },
         ]
       },
     ],
