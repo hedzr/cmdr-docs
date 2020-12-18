@@ -38,31 +38,25 @@ pre.language-go {
 
 body {
   font-size: 18px;
-  counter-reset: h2;
-  counter-reset: h3;
-  counter-reset: h4;
-  counter-reset: h5;
-  counter-reset: h6;
+  // counter-reset: h2 1 h3 1 h4 1 h5 1 h6 1;
 }
 
 .page {
-  h1 {
-    counter-reset: h2;
-    counter-reset: h3;
-    counter-reset: h4;
-    counter-reset: h5;
-    counter-reset: h6;
-  }
+  h1 {counter-reset: h2}
+  h3:first-of-type { counter-reset: h2 1}
+  h4:first-of-type { counter-reset: h2 1 h3 1}
+  h5:first-of-type { counter-reset: h2 1 h3 1 h4 1}
+  h6:first-of-type { counter-reset: h2 1 h3 1 h4 1 h5 1}
   h2 {counter-reset: h3}
   h3 {counter-reset: h4}
   h4 {counter-reset: h5}
   h5 {counter-reset: h6}
 
-  h2:before {counter-increment: h2; content: counter(h2) ". "}
-  h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
-  h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
-  h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
-  h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
+  h2:before {content: counter(h2) ". "; counter-increment: h2; }
+  h3:before {content: counter(h2) "." counter(h3) ". "; counter-increment: h3; }
+  h4:before {content: counter(h2) "." counter(h3) "." counter(h4) ". "; counter-increment: h4; }
+  h5:before {content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "; counter-increment: h5; }
+  h6:before {content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "; counter-increment: h6; }
 
   h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none } 
 
