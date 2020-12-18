@@ -1,5 +1,5 @@
 {
-  "name": "abc",
+  "name": "cmdr-docs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -11,13 +11,13 @@
     "hedzr",
     "blog"
   ],
-  "homepage": "https://github.com/hedzr/abc",
+  "homepage": "https://github.com/hedzr/cmdr-docs",
   "bugs": {
-    "url": "https://github.com/hedzr/abc/issues"
+    "url": "https://github.com/hedzr/cmdr-docs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hedzr/abc.git"
+    "url": "git+https://github.com/hedzr/cmdr-docs.git"
   },
   "scripts": {
     "build": "vuepress build docs --temp .temp",
