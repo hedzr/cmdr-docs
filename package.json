@@ -21,7 +21,9 @@
   },
   "scripts": {
     "build": "vuepress build docs --temp .temp",
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "vuepress dev docs --temp .temp --no-clear-screen --port 4002",
+    "docs:dev": "vuepress dev docs --temp .temp --open --no-clear-screen --port 4002",
+    "save:dev": "vuepress dev docs --temp .temp",
     "lint-md": "yarn lint-md:style && yarn lint-md:wording",
     "lint-md:style": "remark --quiet --frail .",
     "lint-md:wording": "textlint ./docs/**/*.md",
