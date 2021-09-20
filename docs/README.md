@@ -16,7 +16,7 @@ features:
   details: Print full commands tree with `~~tree`, Dump the hit/parsed info with `~~debug`
 - title: Ready for Interceptions
   details: Hook and customize the behaviors of `cmdr`
-footer: MIT Licensed | Copyright © 2020 by hedzr
+footer: MIT Licensed | Copyright © 2018-2021 by hedzr
 
 ---
 
@@ -33,6 +33,7 @@ package main
 import (
 	"fmt"
 	"github.com/hedzr/cmdr"
+	"github.com/hedzr/cmdr/tool"
 )
 
 func main() {
@@ -56,17 +57,24 @@ func buildRootCmd() (rootCmd *cmdr.RootCommand) {
 		Description("Enables the unhandled exception handler?").
 		AttachTo(root)
 
-  root.NewSubCommand("soundex", "snd", "sndx", "sound").
+	cmdr.NewCmd().
+		Titles("soundex", "snd", "sndx", "sound").
 		Description("soundex test").
 		Group("Test").
 		TailPlaceholder("[text1, text2, ...]").
 		Action(func(cmd *cmdr.Command, args []string) (err error) {
 			for ix, s := range args {
-				fmt.Printf("%5d. %s => %s\n", ix, s, cmdr.Soundex(s))
+				fmt.Printf("%5d. %s => %s\n", ix, s, tool.Soundex(s))
 			}
 			return
-		})
+		}).
+		AttachTo(root)
 	return
 }
 ```
 
+The screen looks like:
+
+![image-20210920154132341](https://raw.githubusercontent.com/hzimg/blog-pics/master/uPic/image-20210920154132341.png)
+
+That's it!

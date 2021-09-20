@@ -16,7 +16,7 @@ features:
   details: 使用命令行参数 `~~tree`, `~~debug` 打印完整的命令表。
 - title: 多种拦截点
   details: 在多个关键节点处都可以埋入回调函数从而定制 cmdr 的相关行为
-footer: MIT Licensed | Copyright © 2020 by hedzr
+footer: MIT Licensed | Copyright © 2018-2021 by hedzr
 ---
 
 # 立即使用 [`cmdr`](https://github.com/hedzr/cmdr)
@@ -27,6 +27,7 @@ package main
 import (
 	"fmt"
 	"github.com/hedzr/cmdr"
+	"github.com/hedzr/cmdr/tool"
 )
 
 func main() {
