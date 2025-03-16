@@ -20,4 +20,5 @@ docs/.vuepress/dist
 
 _site/
 ref/
+ref.*/
 save/
