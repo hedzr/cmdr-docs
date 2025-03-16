@@ -1,5 +1,11 @@
 # cmdr-docs
 
+> 2025-03-16  
+> THIS REPO HAS BEEN ARCHIVED.
+>
+> The NEW doc site [docs.hedzr.com](https://docs.hedzr.com/) released.
+> And the source MOVED to [cmdr-docs-dev](https://github.com/hedzr/cmdr-docs-dev).
+
 ## upgrade the deps and package.json
 
 ```bash
